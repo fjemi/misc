@@ -27,13 +27,13 @@ class RotatePDF:
                 # rotate the page
                 page.rotateClockwise(degrees)
                 writer.addPage(page)
-                
+            
             with open('output.pdf', 'wb') as output:
                 writer.write(output)
                 print('job done')
             
 
 if __name__ == '__main__':
-    path = 'Rental_packet_9-2-16 Femi Jemilohun.pdf'
+    path = 'input.pdf'
     degrees = -90
     r = RotatePDF(path, degrees)
